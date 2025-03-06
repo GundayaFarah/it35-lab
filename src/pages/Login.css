@@ -1,0 +1,11 @@
+.page-background {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    width: 100%; 
+    position: relative; 
+}
+ion-content {
+    --background: url('https://www.hdwallpapers.in/download/transparent_droplet_landscape_sunrise_clear_sky_pink_blue_4k_hd_technology-3840x2160.jpg') no-repeat center center / cover;
+  }
