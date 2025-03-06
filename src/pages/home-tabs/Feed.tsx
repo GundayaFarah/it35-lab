@@ -1,3 +1,4 @@
+import React, { useState, useRef } from 'react';
 import { 
     IonButtons,
       IonContent, 
@@ -5,7 +6,8 @@ import {
       IonMenuButton, 
       IonPage, 
       IonTitle, 
-      IonToolbar 
+      IonToolbar,
+      IonRange,
   } from '@ionic/react';
   
   const Search: React.FC = () => {
@@ -16,22 +18,16 @@ import {
             <IonButtons slot='start'>
               <IonMenuButton></IonMenuButton>
             </IonButtons>
-            <IonTitle>Search</IonTitle>
+            <IonTitle>Ion-Range</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonContent fullscreen>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              height: '100%',
-            }}
-          >
-            Search
-          </div>
-  
-        </IonContent>
+        <IonRange labelPlacement="start" label="Label at the Start"></IonRange>
+      <br />
+      <IonRange labelPlacement="end" label="Label at the End"></IonRange>
+      <br />
+      <IonRange labelPlacement="fixed" label="Fixed Width Label"></IonRange>
+      <br />
+      <IonRange labelPlacement="stacked" label="Stacked Label"></IonRange>
       </IonPage>
     );
   };
