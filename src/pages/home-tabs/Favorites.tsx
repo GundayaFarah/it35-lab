@@ -5,7 +5,8 @@ import {
       IonMenuButton, 
       IonPage, 
       IonTitle, 
-      IonToolbar 
+      IonToolbar,
+      IonLabel, IonListHeader 
   } from '@ionic/react';
   
   const Favorites: React.FC = () => {
@@ -16,21 +17,39 @@ import {
             <IonButtons slot='start'>
               <IonMenuButton></IonMenuButton>
             </IonButtons>
-            <IonTitle>Favorites</IonTitle>
+            <IonTitle>Ion-List Theming</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonContent fullscreen>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              height: '100%',
-            }}
-          >
-            Favorites
-          </div>
-        </IonContent>
+        <IonListHeader>
+        <IonLabel>Default</IonLabel>
+      </IonListHeader>
+      <IonListHeader color="primary">
+        <IonLabel>Primary</IonLabel>
+      </IonListHeader>
+      <IonListHeader color="secondary">
+        <IonLabel>Secondary</IonLabel>
+      </IonListHeader>
+      <IonListHeader color="tertiary">
+        <IonLabel>Tertiary</IonLabel>
+      </IonListHeader>
+      <IonListHeader color="success">
+        <IonLabel>Success</IonLabel>
+      </IonListHeader>
+      <IonListHeader color="warning">
+        <IonLabel>Warning</IonLabel>
+      </IonListHeader>
+      <IonListHeader color="danger">
+        <IonLabel>Danger</IonLabel>
+      </IonListHeader>
+      <IonListHeader color="light">
+        <IonLabel>Light</IonLabel>
+      </IonListHeader>
+      <IonListHeader color="medium">
+        <IonLabel>Medium</IonLabel>
+      </IonListHeader>
+      <IonListHeader color="dark">
+        <IonLabel>Dark</IonLabel>
+      </IonListHeader>
       </IonPage>
     );
   };
