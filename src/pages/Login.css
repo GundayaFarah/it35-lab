@@ -7,3 +7,6 @@
     position: relative; 
 }
 
+ion-content {
+    --background: url('https://img.freepik.com/free-vector/gradient-style-network-connection-background_23-2148876716.jpg?semt=ais_hybrid&w=740') no-repeat center center / cover;
+  }
