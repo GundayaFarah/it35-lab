@@ -1,35 +1,48 @@
-import React, { useState, useRef } from 'react';
-import { 
-    IonButtons,
-      IonContent, 
-      IonHeader, 
-      IonMenuButton, 
-      IonPage, 
-      IonTitle, 
-      IonToolbar,
-      IonRange,
-  } from '@ionic/react';
-  
-  const Search: React.FC = () => {
-    return (
-      <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonButtons slot='start'>
-              <IonMenuButton></IonMenuButton>
-            </IonButtons>
-            <IonTitle>Ion-Range</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonRange labelPlacement="start" label="Label at the Start"></IonRange>
-      <br />
-      <IonRange labelPlacement="end" label="Label at the End"></IonRange>
-      <br />
-      <IonRange labelPlacement="fixed" label="Fixed Width Label"></IonRange>
-      <br />
-      <IonRange labelPlacement="stacked" label="Stacked Label"></IonRange>
-      </IonPage>
-    );
-  };
-  
-  export default Search;
+import {
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonMenuButton,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonCard,
+  IonCardHeader,
+  IonCardTitle,
+  IonCardContent,
+  IonText
+} from '@ionic/react';
+import FeedContainer from '../../components/FeedContainer';
+
+const Feed: React.FC = () => {
+  return (
+    <IonPage>
+      <IonHeader>
+        <IonToolbar color="dark">
+          <IonButtons slot="start">
+            <IonMenuButton />
+          </IonButtons>
+        </IonToolbar>
+      </IonHeader>
+
+      <IonContent fullscreen color="light">
+        <div style={{ padding: '16px' }}>
+          <IonCard className="ion-activatable ripple-parent">
+            <IonCardHeader>
+              <IonCardTitle>Welcome to your feed</IonCardTitle>
+            </IonCardHeader>
+            <IonCardContent>
+              <IonText color="medium">
+                Here's where you’ll see your latest updates.
+              </IonText>
+            </IonCardContent>
+          </IonCard>
+
+          <FeedContainer />
+        </div>
+      </IonContent>
+    </IonPage>
+  );
+};
+
+export default Feed;
